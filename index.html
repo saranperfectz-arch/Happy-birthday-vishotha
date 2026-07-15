@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Vishotha ❤️</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ff6fa3,#ffd1e6);text-align:center;color:#fff}
+.wrap{padding:30px}
+img{width:260px;max-width:90%%;border-radius:18px;box-shadow:0 0 18px #fff;margin:10px}
+button{padding:14px 28px;border:none;border-radius:30px;background:#fff;color:#ff2d7a;font-size:18px}
+#msg{display:none;font-size:22px;margin-top:20px}
+</style></head>
+<body>
+<div class="wrap">
+<h1>🎉 Happy Birthday Vishotha ❤️</h1>
+<p>A special surprise just for you 💖</p>
+<img id="slide" src="photo1.jpg">
+<br>
+<button onclick="start()">🎁 Open Your Surprise</button>
+<div id="msg">Happy Birthday Vishotha! 💖<br>May your smile always shine. Stay blessed! 🎂✨</div>
+<audio id="music" loop><source src="song.mp3" type="audio/mpeg"></audio>
+</div>
+<script>
+const imgs=["photo1.jpg","photo2.jpg","photo3.jpg"];
+let i=0;
+setInterval(()=>{i=(i+1)%imgs.length;document.getElementById("slide").src=imgs[i];},3000);
+function start(){document.getElementById("msg").style.display="block";document.getElementById("music").play();}
+</script>
+</body></html>
